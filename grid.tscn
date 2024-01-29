@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://v8vqtpr7rrcn"]
+
+[ext_resource type="Script" path="res://grid.gd" id="1_bse6x"]
+[ext_resource type="PackedScene" uid="uid://c8p2x5w3ggtm1" path="res://astar_map.tscn" id="2_8de3j"]
+
+[node name="grid" type="Node2D"]
+script = ExtResource("1_bse6x")
+
+[node name="Line2D4" type="Line2D" parent="."]
+points = PackedVector2Array(0, 448, 799.927, 448, 1600, 448, 800, 448, 800, 896, 800, 0)
+width = 2.0
+default_color = Color(0, 0, 0, 0.141176)
+
+[node name="Line2D4" type="Line2D" parent="Line2D4"]
+position = Vector2(-800, -448)
+points = PackedVector2Array(799.927, 448, 2400, 448, 2400, 1348, 800, 1348, 800, 448)
+width = 2.0
+default_color = Color(0, 0, 0, 0.141176)
+
+[node name="astar_map" parent="." instance=ExtResource("2_8de3j")]
